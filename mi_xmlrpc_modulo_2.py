@@ -4,7 +4,7 @@ url = 'http://192.168.1.80:8069'
 db = 'loanbooks'
 username = 'admin'
 password = 'admin'
-
+#import pdb; pdb.set_trace()
 #info = xmlrpc.client.ServerProxy('http://192.168.1.80:8069/start').start()
 #url, db, username, password = \
 #    info['host'], info['database'], info['user'], info['password']
@@ -42,3 +42,8 @@ if (models.execute_kw(db, uid, password,
     # [ids], {'fields': ['name', 'country_id', 'comment','student_value']})
     # for registro in registros:
     #    print(registro)
+import pdb; pdb.set_trace()
+id = models.execute_kw(db, uid, password, 'res.partner', 'create', [{'name': "Windows Student",'student_value': 1 }])
+print(id)
+print("Fin")
+
